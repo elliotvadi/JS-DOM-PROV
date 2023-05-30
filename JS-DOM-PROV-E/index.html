@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="EventDiv">
+
+            <h1 id="demo"></h1>
+            <p id="time"></p>
+            <img id="pic" src="dice-1.png" style=" height: 100px; width: 100px; ">
+  
+        </div>
+
+        <div class="button-container">
+            <button class = "hover-effect" onclick="changeBG()">Change Bg</button>
+            <button class = "hover-effect" onclick="goodVibes()">Good vibes</button>
+            <button class = "hover-effect" onclick="showTime()">Time</button>
+            <button class = "hover-effect" onclick="changePic()">Change picure</button>
+            <button class = "hover-effect" onclick="hidePic()">Hide picture</button>
+            <button class = "hover-effect" onclick="showPic()">Show Picture</button>
+  
+    </div>
+
+    <script>
+
+        var header = document.getElementById("demo");
+        header.style.visibility = "hidden";
+
+        var time = document.getElementById("time");
+        time.style.visibility = "hidden";
+
+        const date = new Date();
+
+        function changeBG() {
+            document.body.style.backgroundColor = "cyan";
+        }
+
+        function changePic() {
+            document.getElementById("pic").src = "dice-6.png";
+        }
+
+        function hidePic() {
+            var pic = document.getElementById("pic");
+            pic.style.visibility = "hidden";
+        }
+
+        function showPic() {
+            var pic = document.getElementById("pic");
+            pic.style.visibility = "visible";
+        }
+
+        function goodVibes() {
+            document.getElementById("demo").innerHTML = "Be the best version of you!";
+            header.style.visibility = "visible";
+        }
+        
+        function showTime() {
+   
+            document.getElementById("time").innerHTML = date;
+            time.style.visibility = "visible";
+        }
+
+        // Elliot Vadi, TE20D
+    </script>
+
+    </body>
+</html>
